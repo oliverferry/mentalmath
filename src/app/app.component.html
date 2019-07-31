@@ -1,0 +1,103 @@
+<div *ngIf="gameMenu">
+  <br><br>
+<h1>Mental Math</h1>
+<button (click)='startTimer()'>Start Game</button>
+<!-- <img src="https://general-devices.com/wp-content/uploads/2016/08/appstore-icon-for-your-computer-google-play.gif" alt="Italian Trulli" class="left" style="width:200px"> -->
+</div>
+
+<div *ngIf="gameStart">
+  <div style="clear: both">
+    <h5>Time Left: </h5>
+    <h2>{{timeLeft}}</h2>
+</div>
+<hr />
+<!-- <h3>Time Left: </h3><h2>{{timeLeft}} </h2><br> -->
+<div class="box">
+<h3>{{equation}} = </h3> 
+<input [(ngModel)]="inputBox" name="inputBox" (keyup)="onKey($event)">
+</div>
+<br>
+<p>score: {{score}}</p>
+</div>  
+
+<div *ngIf="gameFinished">
+  <h4>Times Up </h4>
+  <h3>you scored: {{score}}</h3>
+  <br>
+  <table id="customers">
+  <tr>
+    <th>Name</th>
+    <th>High Score</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td>Oliver</td>
+    <td>34</td>
+    <td>7/23/19</td>
+  </tr>
+  <tr>
+    <td>Anonymous</td>
+    <td>32</td>
+    <td>7/15/19</td>
+  </tr>
+  <tr>
+    <td>Jacky</td>
+    <td>28</td>
+    <td>7/18/19</td>
+  </tr>
+    <tr>
+    <td>Rasputin</td>
+    <td>28</td>
+    <td>7/22/19</td>
+  </tr>
+    <tr>
+    <td>Bo Jack</td>
+    <td>28</td>
+    <td>7/18/19</td>
+  </tr>
+    <tr>
+    <td>Anonymous</td>
+    <td>26</td>
+    <td>7/21/19</td>
+  </tr>
+    <tr>
+    <td>Player</td>
+    <td>25</td>
+    <td>7/18/19</td>
+  </tr>
+    <tr>
+    <td>Nick R</td>
+    <td>24</td>
+    <td>7/18/19</td>
+  </tr>
+    <tr>
+    <td>Jacky</td>
+    <td>24</td>
+    <td>7/18/19</td>
+  </tr>
+    <tr>
+    <td>Rasputin</td>
+    <td>24</td>
+    <td>7/22/19</td>
+  </tr>
+    <tr>
+    <td>Bo Jack</td>
+    <td>24</td>
+    <td>7/18/19</td>
+  </tr>
+   
+</table>
+
+<br>
+
+<button (click)='playAgain()'>Play Again</button>
+
+</div>
+
+<!-- <div *ngIf="playagain">
+
+<p> Website made by Soham Dharmadhakiry </p>
+<img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/1239634_666745886706899_2783214759209209278_n.jpg?_nc_cat=108&_nc_oc=AQkU_G2oEwXMP9rcdfuPtOoGEOEzo87N8wyv3UOag_8xXCR9A1aM7erZIHPP7gPuR9E&_nc_ht=scontent-lga3-1.xx&oh=c9ef43deb9ca4de88c60afca6a58c6e9&oe=5DA9CE74" alt="Italian Trulli" style="width:200px">
+
+  
+</div> -->
